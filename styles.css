@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Lora', serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #FF6F61;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container a, 
+.button-container button {
+    text-decoration: none;
+    color: white;
+    background-color: #FF6F61;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.button-container a:hover, 
+.button-container button:hover {
+    background-color: #e85d50;
+}
+
+.particle {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall 5s linear infinite;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: #888;
+    z-index: 2;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
+
+/* Ensure audio controls are visible and positioned */
+audio {
+    display: block; /* Make sure the audio element is visible */
+    margin-top: 20px; /* Space between the audio controls and other content */
+}
